@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <div class="main">
+
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg p-3 border">
+      <a class="navbar-brand" href="#">Pinterest</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/profile">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/feed">Feed</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navigation">
+        <a class="button" href="/logout">
+          <img class="img1" src="images/uploads/<%= newuser.profilePicture %>">
+          <div class="logout">LOGOUT</div>
+        </a>
+      </div>
+    </nav>
+
+
+    <!-- form for uploading new profile image -->
+    <form id="profileform" hidden action="/fileupload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image">
+    </form>
+
+
+    <!-- main profile card -->
+    <div class="main1 mt-3">
+      <div class="card position-relative">      
+        <div class="profile-container">
+          <img src="images/uploads/<%= newuser.profilePicture %>">
+          <span class="position-absolute w-15 h-10 left: -300% d-flex bg-secondary p-2 rounded-circle" style="transform: translateX(300%)">
+            <i id="editprofile" class="bi bi-pencil-fill text-white"></i>
+          </span>
+        </div>
+        <div class="profile-info">
+          <h1><%= newuser.username %></h1>
+          <p class="job-title">Web Developer</p>
+          <p class="desc">I am a proficient web developer with 3+ years of experience.</p>
+        </div>
+        <div class="profile-social">
+          <a href="https://www.linkedin.com/in/manoj-kumhar-472321261/">LinkedIn</a>
+          <a href="https://github.com/Manoj7413">GitHub</a>
+          <a href="https://github.com/Manoj7413">Blogs</a>
+        </div>
+        <a class="btn btn-primary mt-3" href="/upload_here" role="button" aria-expanded="false" aria-controls="collapseExample">Upload New Post</a>
+        <div class="card-bottom mt-3"></div>
+      </div>
+    </div>
+    <div class="container">
+        <% newuser.posts.forEach(function(post){ %>
+          <div class="cards" style="width: 15rem;">
+            <img src="images/uploads/<%= post.image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><%= post.imagetext %></p>
+            </div>
+          </div>
+        <% }) %>
+    </div>
+  </div>
+  <script>
+    document.querySelector('#editprofile').addEventListener('click',function (){
+      document.querySelector('#profileform input').click();
+    });
+    document.querySelector('#profileform input').addEventListener('change',function(){
+      document.querySelector('#profileform').submit();
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

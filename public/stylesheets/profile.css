@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+.main1{
+  display: flex;
+  flex-direction: row;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.inputs{
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: default;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: 0.3s all ease-in-out;
+}
+
+.cards{
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  transform: 0.3s all ease-in-out;
+  background-color: rgba(128, 128, 128, 0.109);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.card .profile-container {
+  background-color: #9dbdff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 40px;
+  transition: 0.3s all ease-in-out;
+}
+
+.card .profile-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 16px;
+}
+
+.card .profile-info h1 {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.card .profile-info .job-title {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+}
+
+.card .profile-info .desc {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 0.9rem;
+  max-width: 300px;
+  margin-top: 8px;
+}
+
+.card .profile-social {
+  display: flex;
+  gap: 8px;
+}
+
+.card .profile-social a {
+  color: #7695ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.card .profile-social a:hover {
+  text-decoration: underline;
+}
+
+.card-bottom {
+  width: 100%;
+  background-color: #ff9874;
+  height: 5px;
+  transition: 0.3s all ease-in-out;
+}
+
+.card:hover .card-bottom {
+  background-color: #ff6b6b;
+}
+
+.card:hover .profile-container {
+  background-color: #7695ff;
+}
+
+
+/* logout btn */
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+.navigation {
+  height: 0px;
+  position: absolute;
+  background-color: wheat;
+  top: 0px;
+  right: 0px;
+}
+
+.img1{
+  width: 25px;
+  border-radius: 50px;
+  float: left;
+}
+
+.logout {
+  font-size: .8em;
+  font-family: 'Oswald', sans-serif;
+	position: relative;
+  right: -12px;
+  bottom: -4px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity .45s;
+  -webkit-transition: opacity .35s;
+  
+}
+
+.button {
+	text-decoration: none;
+	float: right;
+  padding: 12px;
+  margin: 10px;
+  color: white;
+  width: 50px;
+  background-color: black;
+  transition: width .35s;
+  -webkit-transition: width .35s;
+  overflow: hidden;
+  border: wheat solid 1px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  width: 130px;
+}
+
+.button:hover .logout{
+  opacity: .9;
+}
+
+.button {
+  text-decoration: none;
+}
+
