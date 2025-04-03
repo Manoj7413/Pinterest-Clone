@@ -131,6 +131,7 @@
 }
 
 .img1{
+  height: 25px;
   width: 25px;
   border-radius: 50px;
   float: left;
