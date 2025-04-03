@@ -14,11 +14,9 @@ A fully responsive Pinterest-inspired image-sharing website built with modern we
 - **Database:** MongoDB.
 
 ## 📷 Screenshots
-### Home Page
-<img src="public/images/Overview_Img's/home.png">
-
-### Feed Page
- <img src="public/images/Overview_Img's/feed.png">
+| Home Page | Feed Page |
+|-----------|----------|
+| <img src="public/images/Overview_Img's/home.png" width="100%" style="border: 2px solid #ccc; border-radius: 10px;"> | <img src="public/images/Overview_Img's/feed.png" width="100%" style="border: 2px solid #ccc; border-radius: 10px;"> |
  
 | Register Page | Login Page |
 |--------------|-----------|
