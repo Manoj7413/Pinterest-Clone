@@ -17,4 +17,6 @@ A fully responsive Pinterest-inspired image-sharing website built with modern we
 <p align="center">
   <img src="public/images/Overview_Img's/home.png">
   <img src="public/images/Overview_Img's/feed.png">
+   <img src="public/images/Overview_Img's/register.png" width="50%" >
+   <img src="public/images/Overview_Img's/login.png" width="50%" >
 </p>
