@@ -20,9 +20,7 @@ A fully responsive Pinterest-inspired image-sharing website built with modern we
 ### Feed Page
  <img src="public/images/Overview_Img's/feed.png">
  
-### Login And Register Page
-<p>
-  <img src="public/images/Overview_Img's/register.png" width="50%" >
-  <img src="public/images/Overview_Img's/login.png" width="50%" >
-</p>
+| Register Page | Login Page |
+|--------------|-----------|
+| ![Register](public/images/Overview_Img's/register.png) | ![Login](public/images/Overview_Img's/login.png) |
   
